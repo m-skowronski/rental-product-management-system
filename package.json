@@ -2,7 +2,15 @@
   "name": "@rpm/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,mjs,cjs,json,css,scss,html}": [
+      "nx affected -t lint --base=origin/main",
+      "prettier --write"
+    ]
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~22.0.4",
@@ -11,6 +19,7 @@
     "@angular/forms": "~22.0.4",
     "@angular/platform-browser": "~22.0.4",
     "@angular/router": "~22.0.4",
+    "@ngrx/eslint-plugin": "^21.1.1",
     "rxjs": "~7.8.0"
   },
   "devDependencies": {
@@ -37,7 +46,9 @@
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-playwright": "^1.6.2",
+    "husky": "^9.1.7",
     "jsdom": "^27.1.0",
+    "lint-staged": "^17.3.0",
     "nx": "23.1.1",
     "prettier": "~3.6.2",
     "tslib": "^2.3.0",
