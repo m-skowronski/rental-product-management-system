@@ -1,0 +1,7 @@
+@import 'tailwindcss' source('./app');
+
+/* 
+  TODO: add libs/configure @source sync generator
+  https://nx.dev/docs/kb/using-tailwind-css-with-angular-projects
+  https://nx.dev/blog/setup-tailwind-4-angular-nx-workspace
+*/
